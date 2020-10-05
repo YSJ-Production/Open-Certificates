@@ -15,7 +15,7 @@ let certificates = {
 		recipient: "Maurice Alexander Purnawan",
 		date: "5 October 2020",
 		description: "Maurice has been a valuable member of the Young Scientists Journal. He has been an asset to most Software Development projects and has always actively contributed. He developed entirely the new submission platform for our organization. Thank you for your contributions Maurice! It is great having you on the YSJ Team.",
-		signature: "Federico Galbiati, Head of Production"
+		signature: "Head of Production"
 	}
 }
 
