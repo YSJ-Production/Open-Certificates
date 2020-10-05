@@ -25,7 +25,7 @@ function Certificate() {
         sponsor = <img style={{position: 'absolute', left: '20%', top: '8%', height: '50px'}} src={ certificate.sponsor }/>;
     }
     // Else render the certificate page
-    return (<div class="container" style={{margin: '0px 60px'}, {width: '100%'}}>
+    return (<div class="container" style={{margin: '0px 60px', width: '100%', maxWidth: '100%'}}>
                 <div class="row">
                     <div class="col-auto col-md-6">
                         <div class="card">
