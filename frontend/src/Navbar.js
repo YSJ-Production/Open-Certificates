@@ -5,7 +5,7 @@ import './App.css';
 // Renders a navbar with the organization name and logo
 function Navbar() {
   // Name of the organization to be rendered in the navbar
-  let companyName = "Open Certificates";
+  let companyName = "Young Scientists Journal";
   // Where the logo is located
   let logo = "assets/img/logo.png"
   return (
