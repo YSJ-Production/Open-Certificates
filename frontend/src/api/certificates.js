@@ -10,13 +10,12 @@
 
 // List of certificates to be managed by the system
 let certificates = {
-	"wYgaaTEsQO": {
+	"TOUxINDdxC": {
 		type: "Volunteering Certificate",
-		recipient: "First Name",
-		date: "1 January 2020",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus urna at risus tempor faucibus. Praesent nibh erat, gravida id tristique ac, pellentesque sit amet arcu. Quisque nisi nunc, aliquet quis lorem a, blandit fringilla dolor. Ut venenatis metus laoreet porta hendrerit. Aenean a fringilla arcu. Aenean consectetur leo eget lectus molestie, eu dignissim arcu tempus. Maecenas sit amet interdum libero. Mauris semper vehicula tincidunt. Nunc egestas ut enim eget cursus",
-		signature: "Signature",
-		sponsor: "assets/img/sponsor.png"
+		recipient: "Maurice Alexander Purnawan",
+		date: "5 October 2020",
+		description: "Maurice has been a valuable member of the Young Scientists Journal. He has been an asset to most Software Development projects and has always actively contributed. He developed entirely the new submission platform for our organization. Thank you for your contributions Maurice! It is great having you on the YSJ Team.",
+		signature: "Federico Galbiati, Head of Production"
 	}
 }
 
