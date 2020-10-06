@@ -1,0 +1,4 @@
+[build]
+base = "Open-Certificates/frontend"
+publish = "Open-Certificates/frontend/build"
+command = "npm run build"
