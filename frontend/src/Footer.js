@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 // Functions to open different endpoints based on the social network
@@ -23,19 +22,22 @@ function openSharePage(url) {
     ); 
 }
 
+let noBorder = {
+    border: '0px'
+}
+
 function Footer() {
   return (<div>
-    <footer class="footer text-center">
-        <div class="container">
-            <ul class="list-inline mb-5">
-                <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" onClick={ getFacebookLink }><i class="icon-social-facebook"></i></a>
+    <footer className="footer text-center">
+        <div className="container">
+            <ul className="list-inline mb-5">
+                <li className="list-inline-item">&nbsp;<button className="text-white social-link rounded-circle" style={noBorder} onClick={ getFacebookLink }><i className="icon-social-facebook"></i></button>
             </li>
-                <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" onClick={ getLinkedInLink }><i class="icon-social-linkedin"></i></a></li>
-                <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" onClick={ getTwitterShare }><i class="icon-social-twitter"></i></a></li>
+                <li className="list-inline-item">&nbsp;<button className="text-white social-link rounded-circle" style={noBorder} onClick={ getLinkedInLink }><i className="icon-social-linkedin"></i></button></li>
+                <li className="list-inline-item">&nbsp;<button className="text-white social-link rounded-circle" style={noBorder} onClick={ getTwitterShare }><i className="icon-social-twitter"></i></button></li>
             </ul>
-            <p class="text-muted mb-0 small">This is an open source platform built by Federico Galbiati, check it out at <a href="https://github.com/fedeit/open-certificates">github.com/fedeit/open-certificates!</a></p>
         </div>
-        <a class="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i class="fa fa-angle-up"></i></a>
+        <a className="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i className="fa fa-angle-up"></i></a>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
