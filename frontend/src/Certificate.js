@@ -36,29 +36,38 @@ function Certificate() {
                     sponsor = <img style={{position: 'absolute', left: '20%', top: '8%', height: '50px'}} src={ certificate.sponsor.fields.file.url } alt="Sponsor of this certificate"/>;
                 }
 
+                let imageURL = "assets/img/certificate-img.png";
+                let imageOverlay = <div></div>;
+                if (certificate.certificate === undefined) {
+                    imageOverlay =  <div style={{position: 'absolute', left: '60px', top: '10px', width: '50%', height: '90%'}}>
+                                        <img style={{position: 'absolute', left: '8%', top: '8%', height: '50px'}} src={ orgLogo } alt="Organization logo"/>
+                                        { sponsor } 
+                                        <h5 className="text-center" style={{position: 'absolute', width: '70%', top: '25%',}}>Certificate of Appreciation</h5>
+                                        <p className="text-center" style={{position: 'absolute', width: '70%', top: '40%'}}>Presented To</p>
+                                        <h4 className="text-center" style={{position: 'absolute', width: '70%', top: '50%'}}><strong>{ certificate.recipient }</strong></h4>
+                                        <p style={{top: '75%', position: 'absolute', fontFamily: "'Alex Brush', cursive", fontSize: '25px', width: '70%'}}><strong>{ certificate.signature }</strong></p>
+                                    </div>;
+                } else {
+                    imageURL = certificate.certificate.fields.file.url;
+                }
+
                 return (
                     <div className="container" style={{margin: '0px 60px', width: '100%', maxWidth: '100%'}}>
                         <div className="row">
-                            <div className="col-auto col-md-6">
+                            <div className="col-auto col-md-6" style={{ paddingBottom: '10px'}}>
                                 <div className="card">
                                     <div className="card-body">
                                         <h3 className="card-title">{certificate.type}</h3>
                                         <h4 className="card-title">{certificate.recipient}</h4>
                                         <h6 className="text-muted card-subtitle mb-2"><strong>{ certificate.date }</strong></h6>
                                         <p className="card-text"><strong>{ certificate.description }</strong></p>
+                                        <p className="card-text">Emitted by: <strong>{ certificate.signature }</strong></p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-auto col-md-6" style={{width: '100%'}}>
-                                <img style={{top: '0px', left: '0px', width: '100%', height: '100%'}} src="assets/img/certificate-img.png" alt="Certificate background"/>
-                                <div style={{position: 'absolute', left: '60px', top: '10px', width: '50%', height: '90%'}}>
-                                    <img style={{position: 'absolute', left: '8%', top: '8%', height: '50px'}} src={ orgLogo } alt="Organization logo"/>
-                                    { sponsor } 
-                                    <h5 className="text-center" style={{position: 'absolute', width: '70%', top: '25%',}}>Certificate of Appreciation</h5>
-                                    <p className="text-center" style={{position: 'absolute', width: '70%', top: '40%'}}>Presented To</p>
-                                    <h4 className="text-center" style={{position: 'absolute', width: '70%', top: '50%'}}><strong>{ certificate.recipient }</strong></h4>
-                                    <p style={{top: '75%', position: 'absolute', fontFamily: "'Alex Brush', cursive", fontSize: '25px', width: '70%'}}><strong>{ certificate.signature }</strong></p>
-                                </div>
+                                <img style={{top: '0px', left: '0px', width: '100%', height: '100%'}} src={ imageURL } alt="Certificate background"/>
+                                { imageOverlay }
                             </div>
                         </div>
                     </div>
